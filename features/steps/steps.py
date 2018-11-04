@@ -1,5 +1,5 @@
 from behave import given, when, then
-from lambda_function import compute_short_chain
+from lambda_function import compute_short_chain, compute_long_chain
 
 @given(u'a {number}')
 def set_the_given_integer(context, number):
@@ -21,4 +21,4 @@ def assert_given_squared_is_returned(context, product):
 @then(u'the expected result {cube} is the cube created when each side is the number and should be returned')
 def assert_given_cube_is_returned(context, cube):
     assert int(cube) == context.long_chain_value
-    assert context.long_chain_value == contex.given_number ** 3
+    assert context.long_chain_value == context.given_number ** 3
