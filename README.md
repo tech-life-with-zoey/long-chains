@@ -1,2 +1,9 @@
-# long-chains
-Lambda function to calculate squares and cubes for an alexa skill
+# Long Chains
+
+Lambda function to calculate squares and cubes
+
+This supports an Alexa skill to do the same.
+
+## Background
+
+
