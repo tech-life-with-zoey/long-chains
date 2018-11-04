@@ -1,0 +1,20 @@
+---
+version: 0.2
+phases:
+  install:
+    commands:
+      - pipenv sync --dev
+  pre_build:
+    commands:
+      - export PATH=`pipenv --venv`/bin:$PATH
+  build:
+    commands:
+      - coverage run --omit features/steps/steps.py --source='.' -m behave --no-summary -f json > test_results.json
+  post_build:
+    commands:
+      - coverage report > code_coverage.txt
+      - pipenv uninstall --all-dev
+      - rm -rf features
+artifacts:
+  files:
+    - '**/*'
