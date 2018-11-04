@@ -13,5 +13,17 @@ def compute_short_chain(number):
 
     return number * number
 
+def compute_long_chain(number):
+    """Compute a long chain
+
+    Arguments:
+        number {int} -- Requested number for which to compute the cube
+
+    Returns:
+        int -- Value of the cube/long chain for the given number
+    """
+
+    return number * number * number
+
 def lambda_handler(event, context):
     pass
