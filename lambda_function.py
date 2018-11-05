@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 def compute_short_chain(number):
     """Compute a short chain
 
@@ -13,6 +14,7 @@ def compute_short_chain(number):
 
     return number * number
 
+
 def compute_long_chain(number):
     """Compute a long chain
 
@@ -24,6 +26,7 @@ def compute_long_chain(number):
     """
 
     return number * number * number
+
 
 def lambda_handler(event, context):
     pass
